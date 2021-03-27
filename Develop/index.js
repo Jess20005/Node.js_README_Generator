@@ -45,7 +45,7 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'repo',
+    name: 'usage',
     message: 'What does the user need to know about using the repo?',
   },
   {
@@ -69,6 +69,7 @@ function init() {
     inquirer.prompt(questions)
     .then(answers => {
         writeToFile('README.md', answers)
+        console.log(answers)
     })
 }
 
